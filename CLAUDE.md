@@ -2,6 +2,35 @@
 
 This file provides guidance to Claude Code when working with this repository.
 
+## Quick Start (Handoff Summary)
+
+**What this is:** Multi-agent adversarial code review tool. Claude + GPT Codex review code independently, cross-review each other's findings, debate via meta-review, then Claude synthesizes and implements fixes.
+
+**To run:**
+```bash
+cd /Users/alec/kernel/adversarial-review
+./adversarial_review.sh ../some-project      # Real run
+./adversarial_review.sh --dry-run ../project # Test without API calls
+./adversarial_review.sh --status             # Check state
+./adversarial_review.sh --reset              # Reset all state
+```
+
+**Dependencies:**
+```bash
+npm install -g @openai/codex  # If not installed
+brew install coreutils        # For timeout on macOS (gtimeout)
+```
+
+**Current status:** Prototype complete, dry-run tested. Ready for real testing.
+
+**Next steps:**
+1. Test with actual Claude + Codex API calls
+2. Add bats tests following ralph's pattern
+3. Tune prompts based on real review results
+4. Add cost tracking
+
+---
+
 ## Repository Overview
 
 Adversarial Review is a multi-agent code review tool that uses Claude and GPT Codex in an adversarial debate loop. Two AI agents independently review code, critique each other's findings, and reach consensus through structured debate.
