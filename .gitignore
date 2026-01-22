@@ -1,0 +1,21 @@
+# State files (regenerated on run)
+tracking.json
+.circuit_breaker.json
+.circuit_breaker_history.json
+.response_analysis.json
+
+# Artifacts (can be large, regenerated)
+artifacts/
+
+# Logs
+logs/
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
